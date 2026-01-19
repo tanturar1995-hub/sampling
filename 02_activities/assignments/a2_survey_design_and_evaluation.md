@@ -40,31 +40,63 @@ For the **Canadian General Social Survey on Giving, Volunteering, and Participat
 
 ## Part A - Survey Design: 
 
-The number of your chosen topic: `#`
+The number of your chosen topic: #3
 
 Describe the purpose of your survey:
 ```
 write your answer here...
-```
+This survey investigates how music taste and perceptions of “popular music” vary across age groups, and how individuals believe their own music preferences have changed over their lifetime. The goal is to separate (a) differences between cohorts (e.g., teens vs. middle-aged adults) from (b) within-person change (retrospective shifts in taste over time).
+
 
 Describe your target population, sampling frame, sampling units, and observational units:
 ```
 write your answer here...
 ```
+Target population:
+All people aged 15+ living in Canada (private households), regardless of student status.
+
+Sampling frame:
+A practical, mixed frame combining (1) a Canadian online research panel with demographic targeting (age, province, language), plus (2) the University of Toronto participant pool (students/staff/community members) as a supplementary frame. Because the UofT pool will not represent Canada, it will be treated as supplemental and flagged for separate analysis or down-weighting.
+
+Sampling units:
+Individuals (one completed questionnaire per person).
+
+Observational units:
+Individuals (the respondent). Retrospective questions create multiple “time points” per person (e.g., their taste at age 15, 25, etc.), but the unit remains the respondent.
+
+Overall sampling strategy:
+Stratified probability-style sampling by age group to ensure enough respondents in each cohort (e.g., 15–17, 18–24, 25–34, 35–44, 45–54, 55–64, 65+). Within each age stratum, recruit approximately equal numbers (disproportionate allocation) to improve comparisons; then apply post-stratification weights to align the final sample with known population age/sex/province totals (from Census estimates). This strategy is justified because age is the key explanatory variable, and balanced strata reduce variance and improve subgroup comparisons.
 
 Your 5-10 question survey:
 ```
-1. write your question here...
-2. write your question here...
-3. write your question here...
-4. write your question here...
-5. write your question here...
-6. write your question here... (optional)
-7. write your question here... (optional)
-8. write your question here... (optional)
-9. write your question here... (optional)
-10. write your question here... (optional)
-```
+1. What is your age?  (open numeric) 
+   Optional: Which age group best describes you? (15–17, 18–24, 25–34, 35–44, 45–54, 55–64, 65+)
+
+2. In the past 30 days, how often have you listened to music? 
+   (Never, Less than weekly, 1–2 days/week, 3–5 days/week, Daily)
+
+3. Which THREE genres do you listen to most often right now? (select up to 3)
+   (Pop, Rock, Hip-hop/Rap, R&B/Soul, Electronic/Dance, Country, Jazz, Classical, Metal, Indie/Alternative, K-pop, Latin, Folk, Other: ____)
+
+4. Thinking about “popular music today” (current mainstream hits), how much do you agree with each statement?
+   a. “Popular music today is high quality.” 
+   b. “Popular music today feels repetitive.” 
+   c. “Popular music today is better than popular music when I was younger.”
+   (5-point Likert: Strongly disagree → Strongly agree)
+
+5. At what age did you feel most connected to new popular music releases? 
+   (Under 13, 13–17, 18–24, 25–34, 35–44, 45–54, 55+)
+
+6. Compared to when you were 15–17 years old, how has your music taste changed overall?
+   (No change, Small change, Moderate change, Large change, Completely different, Not applicable/Don’t remember)
+
+7. Retrospective “top genre” check: For each age period, what genre did you listen to most? 
+   a) 15–17  b) 18–24  c) 25–34  d) 35–44  e) 45+ 
+   (same genre list as Q3 + “Don’t remember”)
+
+8. What influences your music choices the most right now? (select up to 2)
+   (Friends/family, Social media, Radio/TV, Streaming recommendations, Live events, Personal mood/mental focus, Cultural identity, Other: ____)
+
 
 ## Part B - Survey Evaluation:
 
@@ -73,6 +105,59 @@ Identify and describe survey features:
 ```
 write your answer here
 ```
+1. Sample type.
+Cross-sectional probability sample with stratified design province and CMA strata and two-stage selection household then one person.
+Includes a rejective sampling element subsampling among non-volunteers to manage prevalence and burden.
+
+2. Sample size.
+StatCan reports a field sample of about 50,000 units, with about 40,000 invitation letters for the electronic questionnaire and an expected completion of about 24,000 questionnaires. The same documentation reports an overall response rate of 41.9 percent, which implies an achieved completed sample on the order of about 21,000. This is approximate because the exact final respondent count is not stated in the excerpt.
+
+3. Target population.
+People aged 15 plus living in private households in the 10 provinces, excluding full-time institutional residents, and excluding territories.
+
+4. Sampling frame.
+Frame combines landline and cell phone numbers from Census and administrative sources linked with Statistics Canada’s dwelling frame. Records are groups of phone numbers associated with an address, or a single number if address linkage is unavailable.
+
+5. Survey modes.
+Electronic questionnaire self-completed online.
+CATI computer-assisted telephone interviewing.
+
+6. Timeline.
+Collection dates. 2018-09-04 to 2018-12-28.
+Reference period. Past 12 months preceding interview date.
+
+7. Response rate.
+Overall response rate. 41.9 percent.
+
+8. Weights.
+Person-level analysis weight. WGHT_PER basic person weight.
+Bootstrap weights provided for design-based variance estimation.
+Weighting includes adjustments related to rejective sampling and calibration so estimates represent the target population. Documentation also notes adjustment so the weighted income distribution matches the 2017 CIS distribution by province.
+
+9. Data processing.
+Processing used SSPE generalized processing steps and utilities. Edits performed automatically and manually, including family, consistency, and flow edits. The CATI instrument included built-in edits and range checks.
+
+10. Cleaning and imputation.
+Imputation primarily via donor imputation nearest-neighbour style using a score function, with mean imputation when donor imputation was not possible.
+Imputation described as occurring in nine steps including income, volunteering variables, and donation file variables.
+Income. Personal income questions were not asked. Income obtained via tax linkage 2017 T1FF for 81.9 percent of respondents and remaining missing income imputed.
+
+11. Sources of error.
+Sampling error handled via bootstrap variance estimation.
+Non-sampling error including coverage error for example households without telephones, non-response, response errors, and processing errors.
+
+12. Limitations and known biases.
+Telephone coverage limitations. Households without telephones or not covered by the frame are excluded from the surveyed population, which can bias results if excluded groups differ systematically.
+Low response rate 41.9 percent increases risk of nonresponse bias even with weighting adjustments.
+Population coverage limits. Excludes territories and full-time institutional residents.
+Potential mode effects online versus phone, plus recall and social desirability bias for volunteering and donating topics.
+
+13. Documentation and additional sources.
+
+## References
+[1] Statistics Canada. General Social Survey (GSS), Cycle 33: Giving, Volunteering and Participating, 2018. Survey metadata and methodology (IMDB). Accessed 2026-01-18. 
+[2] Statistics Canada. General Social Survey on Giving, Volunteering and Participating, 2018 (Cycle 33). Public Use Microdata File (PUMF) documentation and user guide. Accessed 2026-01-18. 
+
 
 ## Rubric
 
